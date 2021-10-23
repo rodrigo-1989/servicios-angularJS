@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="promesaApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Promesas</title>
+
+	<script src="js/lib/angular.min.js"></script>
+	<script src="angular/app.js"></script>
+	<script src="angular/controladores.js"></script>
+	<script src="angular/servicios.js"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body ng-controller="personasCtrl">
+
+<div class="container" >
+	<h1 class="text-primary">Servicios</h1>
+	<hr>
+	<label class="label label-primary " ng-show="personas.cargando">Cargando data...</label>
+	
+
+</div>
+<div class="container">
+
+	<!-- <input class="btn btn-primary" type="file" ng-change="cargaArchivo($event)"/> -->
+
+	<input type="file" id="subir_archivo" />
+</div>
+<div class="container">
+
+	<table ng-table class="table table-striped">
+		<tr ng-repeat="user in respuesta">
+		<td title="Name">{{user.id}}</td>
+		<td title="Value">{{user.nombre}}</td>
+		<td title="Name">{{user.apellido}}</td>
+		<td title="Value">{{user.edad}}</td>
+		<td title="Name">{{user.sexo}}</td>
+		<td title="Value">{{user.fechaInicio}}</td>
+		</tr>
+	</table>
+</div>
+
+</div>
+
+	
+</body>
+</html>
