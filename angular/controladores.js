@@ -5,6 +5,18 @@ $scope.file = [];
 $scope.respuesta = [];
 
 
+$scope.retornaColor= function(v){
+    if(v <= 20 ){
+      return {'color':'white','background-color':'blue'};
+    }
+    if(v <=30 && v > 20){
+      return {'color':'pink','background-color':'black'};
+    }
+    if(v > 30){
+      return {'color':'yellow','background-color':'red'};
+    }
+}
+
 const subirImagen= event => {
   console.log(event.target.files);
   let data = new FormData();

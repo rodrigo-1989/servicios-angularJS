@@ -29,8 +29,8 @@
 </div>
 <div class="container">
 
-	<table ng-table class="table table-striped">
-		<tr ng-repeat="user in respuesta">
+	<table ng-table class="table table-striped" >
+		<tr ng-repeat="user in respuesta"  ng-style="retornaColor(user.edad)">
 		<td title="Name">{{user.id}}</td>
 		<td title="Value">{{user.nombre}}</td>
 		<td title="Name">{{user.apellido}}</td>
@@ -40,7 +40,8 @@
 		</tr>
 	</table>
 </div>
-
+<div ng-style="retornaColor(2)">
+	Este es un texto con estilo de AngularJs
 </div>
 
 	
